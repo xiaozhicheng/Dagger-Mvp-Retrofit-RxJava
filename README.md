@@ -1,4 +1,4 @@
-# Dagger-Mvp-Retrofit-RxJava
+# Dagger2入门使用
 
 关于 Dagger2 自己一只想搞明白，但是从去年开始到现在，说真的，看过不少介绍 Dagger2 的文章，但自己一只云里雾里，最近打算把 Dagger2 应用到 MVP 框架中去，所以就重新翻看相关技术文章，重新学习下，下面算是自己这两天学习 Dagger2 后对 Dagger2 的认识，不一定都正确，如果 错误，欢迎指正，只要从代码角度出发，认识 Dagger2。
 
