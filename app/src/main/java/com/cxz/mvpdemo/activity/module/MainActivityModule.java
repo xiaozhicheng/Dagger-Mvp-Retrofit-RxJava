@@ -4,6 +4,8 @@ package com.cxz.mvpdemo.activity.module;
 import com.cxz.mvpdemo.activity.ActivityScope;
 import com.cxz.mvpdemo.activity.MainActivity;
 import com.cxz.mvpdemo.activity.presenter.MainPresenter;
+import com.cxz.mvpdemo.activity.view.MainView;
+import com.cxz.mvpdemo.data.api.ApiService;
 import com.cxz.mvpdemo.model.User;
 
 import dagger.Module;
@@ -19,6 +21,8 @@ public class MainActivityModule {
 
     private MainActivity mainActivity;
 
+    private MainView mainView;
+
     public MainActivityModule(MainActivity mainActivity){
         this.mainActivity = mainActivity;
     }
@@ -31,7 +35,7 @@ public class MainActivityModule {
 
     @Provides
     @ActivityScope
-    MainPresenter provideMainPresenter(MainActivity activity, User user){
-        return new MainPresenter(activity,user);
+    MainPresenter provideMainPresenter(ApiService apiService,MainActivity activity, User user){
+        return new MainPresenter(apiService,activity,user);
     }
 }
